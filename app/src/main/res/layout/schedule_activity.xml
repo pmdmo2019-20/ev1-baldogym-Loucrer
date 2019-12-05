@@ -1,12 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.schedule.ScheduleActivity">
+    android:layout_height="match_parent">
 
-    <!-- TODO -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clInterno"
+        android:padding="@dimen/main_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints">
 
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnMon"
+            android:layout_width="54dp"
+            android:layout_height="35dp"
+            android:text="@string/schedule_mon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnTus"
+            android:layout_width="58dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_tue"
+            app:layout_constraintStart_toEndOf="@+id/btnMon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnWed"
+            android:layout_width="56dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_wed"
+            app:layout_constraintStart_toEndOf="@+id/btnTus"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnThur"
+            android:layout_width="56dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_thu"
+            app:layout_constraintStart_toEndOf="@+id/btnWed"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnFri"
+            android:layout_width="56dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_fri"
+            app:layout_constraintStart_toEndOf="@+id/btnThur"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnSatur"
+            android:layout_width="56dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_sat"
+            app:layout_constraintStart_toEndOf="@+id/btnFri"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:padding="@dimen/btn_margin"
+            android:id="@+id/btnSund"
+            android:layout_width="56dp"
+            android:layout_height="34dp"
+            android:text="@string/schedule_sun"
+            app:layout_constraintStart_toEndOf="@+id/btnSatur"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    ​
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lstActivities"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/clInterno"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblEmptyView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/main_lblEmptyView"
+        app:layout_constraintBottom_toBottomOf="@+id/lstActivities"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lstActivities"/>
+
+
+
+    ​
 </androidx.constraintlayout.widget.ConstraintLayout>

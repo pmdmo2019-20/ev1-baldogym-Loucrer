@@ -10,4 +10,75 @@
 
     <!-- TODO -->
 
+    <TextView
+        android:id="@+id/lblHourSession"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lblHourSession"
+        app:layout_constraintBottom_toTopOf="@+id/img"
+        app:layout_constraintEnd_toEndOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img" />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/contentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/lblNameActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/lblNameActivity"
+        app:layout_constraintStart_toEndOf="@+id/img"
+        app:layout_constraintTop_toTopOf="@+id/img" />
+
+    <TextView
+        android:id="@+id/lblTrainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/lblNameTrainer"
+        app:layout_constraintBottom_toTopOf="@+id/lblRoom"
+        app:layout_constraintStart_toEndOf="@+id/img"
+        app:layout_constraintTop_toBottomOf="@+id/lblNameActivity"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/lblRoom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/lblNameRoom"
+        app:layout_constraintBottom_toBottomOf="@+id/img"
+        app:layout_constraintStart_toEndOf="@+id/img" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="101dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/btnJoin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lblNumbersParticipants"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/lblNumbersParticipants"
+        app:layout_constraintEnd_toEndOf="@+id/btnJoin"
+        app:layout_constraintStart_toStartOf="@+id/btnJoin"
+        app:layout_constraintTop_toBottomOf="@+id/btnJoin" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,15 @@ import java.util.concurrent.ThreadLocalRandom
 
 object LocalRepository : Repository {
 
+
+
     // TODO:
+
+    private var tarjetActivity : TrainingSession = createWeekSchedule().get(0).copy()//Lo inicializamos al primero de ejemplo.
+
+    override fun queryAllActivities(): List<TrainingSession> {
+        return createWeekSchedule()
+    }
 
     private fun createWeekSchedule(): List<TrainingSession> {
 
@@ -89,6 +97,97 @@ object LocalRepository : Repository {
             }
         }
         return trainingSessions
+    }
+
+    override fun filterMonday(): List<TrainingSession>{
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.MONDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterTuesday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.TUESDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterWednesday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.WEDNESDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterThursday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.THURSDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterFriday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.FRIDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterSaturday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.SATURDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun filterSunday(): List<TrainingSession> {
+        var newList: MutableList<TrainingSession> = mutableListOf()
+        createWeekSchedule().forEach {
+            if(it.weekDay == WeekDay.SUNDAY){
+                newList.add(it)
+            }
+        }
+        return newList
+    }
+
+    override fun putInfo(idActivity: Integer): TrainingSession {
+        var newSession : TrainingSession = createWeekSchedule().get(0).copy()//Lo inicializamos al primero de ejemplo.
+        createWeekSchedule().forEach {
+            if(it.id == idActivity.toLong()){
+                newSession = it.copy()
+            }
+        }
+        return newSession
+    }
+
+    override fun getTrining(): TrainingSession {
+        return tarjetActivity
+    }
+    override fun PutTrining(position: Number){
+        createWeekSchedule().forEach {
+            if(it.id == position.toLong()){
+                tarjetActivity = it.copy()
+            }
+        }
     }
 
 }

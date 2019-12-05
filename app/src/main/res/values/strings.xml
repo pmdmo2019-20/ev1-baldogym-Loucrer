@@ -35,4 +35,15 @@
     <string name="session_not_found">Training session not found</string>
     <string name="session_imgPhoto">Training session photo</string>
 
+
+    <!--Ejemplos del item Layout-->
+    <string name="lblHourSession">17:00-18:00</string>
+    <string name="lblNameActivity">BodyPunt</string>
+    <string name="lblNameTrainer">Entrenador 2</string>
+    <string name="lblNameRoom">Body Room</string>
+    <string name="lblNumbersParticipants">27 participants</string>
+    <string name="btnJoin">JOIN</string>
+    <string name="contentDescription">Image of the Activity</string>
+    <string name="main_lblEmptyView">Not item yet</string>
+
 </resources>
